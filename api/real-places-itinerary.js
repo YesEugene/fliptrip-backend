@@ -1,16 +1,13 @@
 // Vercel Serverless Function для real-places-itinerary API
-import OpenAI from 'openai';
-import { Client } from '@googlemaps/google-maps-services-js';
-
-// Инициализация OpenAI
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
-
-// Инициализация Google Maps
-const googleMapsClient = new Client({});
+// Временно убираем внешние зависимости для отладки
 
 export default async function handler(req, res) {
+  console.log('🌍 Real places API called:', {
+    method: req.method,
+    body: req.body,
+    headers: req.headers
+  });
+
   // Устанавливаем CORS заголовки
   res.setHeader('Access-Control-Allow-Origin', process.env.CORS_ORIGIN || '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
@@ -19,18 +16,27 @@ export default async function handler(req, res) {
 
   // Обрабатываем preflight OPTIONS запрос
   if (req.method === 'OPTIONS') {
+    console.log('✅ Handling OPTIONS for real-places');
     res.status(200).end();
     return;
   }
 
   if (req.method !== 'POST') {
+    console.log('❌ Method not allowed:', req.method);
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { city, audience, interests, date, budget } = req.body;
+    console.log('🔑 Environment check:', {
+      hasOpenAI: !!process.env.OPENAI_API_KEY,
+      hasGoogleMaps: !!process.env.GOOGLE_MAPS_KEY,
+      corsOrigin: process.env.CORS_ORIGIN
+    });
 
-    // Простая генерация маршрута для демо
+    const { city, audience, interests, date, budget } = req.body;
+    console.log('📝 Request data:', { city, audience, interests, date, budget });
+
+    // Простая генерация маршрута для демо (без реальных API пока)
     const mockItinerary = {
       title: `Exploring ${city || 'Unknown City'}`,
       subtitle: `A perfect day for ${audience || 'travelers'} in ${city || 'the city'}`,

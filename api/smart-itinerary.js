@@ -11,7 +11,7 @@ const openai = new OpenAI({
 const googleMapsClient = new Client({});
 
 export default async function handler(req, res) {
-  // CORS заголовки
+  // CORS заголовки - разрешаем все домены для стабильности
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');

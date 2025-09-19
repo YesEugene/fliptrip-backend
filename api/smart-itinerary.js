@@ -37,7 +37,12 @@ export default async function handler(req, res) {
     const hasOpenAI = process.env.OPENAI_API_KEY && process.env.OPENAI_API_KEY !== 'mock-key-for-development';
     const hasGoogleMaps = !!process.env.GOOGLE_MAPS_KEY;
     
-    console.log('🔑 API Keys status:', { hasOpenAI, hasGoogleMaps });
+    console.log('🔑 API Keys status:', { 
+      hasOpenAI, 
+      hasGoogleMaps,
+      openaiKeyLength: process.env.OPENAI_API_KEY ? process.env.OPENAI_API_KEY.length : 0,
+      googleKeyLength: process.env.GOOGLE_MAPS_KEY ? process.env.GOOGLE_MAPS_KEY.length : 0
+    });
 
     // Генерируем концептуальный маршрут с реальными местами
     const itinerary = generateConceptualItinerary(city, audience, interests, date, budget);

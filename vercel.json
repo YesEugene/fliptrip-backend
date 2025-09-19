@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/pay/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/pay/webhook",
+      "dest": "/api/pay/webhook.js"
+    },
+    {
+      "src": "/api/generate-preview",
+      "dest": "/api/generate-preview.js"
+    },
+    {
+      "src": "/api/create-checkout-session",
+      "dest": "/api/create-checkout-session.js"
+    },
+    {
+      "src": "/api/generate-itinerary",
+      "dest": "/api/generate-itinerary.js"
+    },
+    {
+      "src": "/api/generate-pdf",
+      "dest": "/api/generate-pdf.js"
+    },
+    {
+      "src": "/api/smart-itinerary",
+      "dest": "/api/smart-itinerary.js"
+    }
+  ],
+  "buildCommand": "npm run build",
+  "installCommand": "npm install"
+}

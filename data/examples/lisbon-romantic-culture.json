@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "city": "Lisbon",
+    "date": "2025-09-19",
+    "audience": "couple",
+    "interests": ["romantic", "culture"],
+    "budget": 200
+  },
+  "title": "Lisbon love: a cultural romance journey",
+  "subtitle": "September 19th, 2025 for couples - embark on a romantic escapade in the enchanting city of Lisbon. Unveil the secrets of its cobbled streets, surrender to the charm of the sunset over the Tagus, and get lost in each other's eyes amidst the city's timeless beauty. A day of love, passion, and mesmerizing moments awaits.",
+  "weather": {
+    "forecast": "Expect a warm and pleasant day in Lisbon with temperatures around 24°C. Perfect weather for romantic walks and outdoor cultural exploration.",
+    "clothing": "Wear comfortable walking shoes, light layers, and bring a light jacket for the evening. Perfect weather for romantic strolls.",
+    "tips": "The mild temperature is ideal for exploring on foot. Evening can be slightly cooler near the river, so bring a light sweater."
+  },
+  "budget": {
+    "totalCost": 190,
+    "totalBudget": 200,
+    "isWithinBudget": true,
+    "budgetRatio": 0.95,
+    "remainingBudget": 10
+  },
+  "daily_plan": [{
+    "blocks": [
+      {
+        "time": "08:00",
+        "title": "Morning Start",
+        "items": [{
+          "title": "A Brasileira",
+          "why": "Begin your romantic day at the famous A Brasileira café in Chiado. This historic café, with its beautiful azulejo tiles and bronze statue of poet Fernando Pessoa, embodies Lisbon's rich cultural heritage and provides the perfect intimate setting for morning coffee.",
+          "address": "Rua Garrett, 120, Lisbon",
+          "lat": 38.7108,
+          "lng": -9.1399,
+          "approx_cost": "15€",
+          "tips": "Sit at the outdoor tables and enjoy people-watching in Chiado. Try the famous bica coffee and pastéis de nata.",
+          "duration": "1 hour",
+          "photos": [
+            {
+              "url": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800&h=600&fit=crop&q=80",
+              "thumbnail": "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=200&h=150&fit=crop&q=80",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "09:30",
+        "title": "Morning Activity",
+        "items": [{
+          "title": "Castelo de São Jorge",
+          "why": "Explore this romantic medieval castle together, offering breathtaking panoramic views over Lisbon. The ancient walls and peacocks roaming the grounds create a fairy-tale atmosphere perfect for couples seeking culture and romance.",
+          "address": "Rua de Santa Cruz do Castelo, Lisbon",
+          "lat": 38.7139,
+          "lng": -9.1334,
+          "approx_cost": "20€",
+          "tips": "Visit the camera obscura for unique views of the city. The morning light is perfect for romantic photos with the city backdrop.",
+          "duration": "2 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqOjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqOjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "11:30",
+        "title": "Cultural Experience",
+        "items": [{
+          "title": "Museu Nacional de Arte Antiga",
+          "why": "Discover Portugal's finest art collection together in this beautiful museum. The intimate galleries and masterpieces like the Panels of St. Vincent provide a cultural journey perfect for art-loving couples.",
+          "address": "Rua das Janelas Verdes, Lisbon",
+          "lat": 38.7045,
+          "lng": -9.1622,
+          "approx_cost": "6€",
+          "tips": "Don't miss the famous Panels of St. Vincent and the beautiful chapel. The museum café has a lovely terrace overlooking the Tagus.",
+          "duration": "1.5 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqPjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqPjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "13:00",
+        "title": "Lunch Break",
+        "items": [{
+          "title": "Ramiro",
+          "why": "Experience authentic Lisbon culture at this legendary seafood restaurant. The casual atmosphere and incredible fresh seafood create a uniquely Portuguese dining experience perfect for couples wanting to taste real local culture.",
+          "address": "Av. Almirante Reis, 1H, Lisbon",
+          "lat": 38.7223,
+          "lng": -9.1393,
+          "approx_cost": "40€",
+          "tips": "Try the famous prawns and percebes (gooseneck barnacles). Be prepared to wait, but it's worth it for the authentic experience.",
+          "duration": "1.5 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqQjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqQjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "14:30",
+        "title": "Afternoon Exploration",
+        "items": [{
+          "title": "Jardim da Estrela",
+          "why": "Stroll hand-in-hand through this romantic garden filled with exotic plants and beautiful pavilions. The peaceful atmosphere and stunning greenhouse make it a perfect spot for couples to relax and enjoy each other's company.",
+          "address": "Praça da Estrela, Lisbon",
+          "lat": 38.7135,
+          "lng": -9.1598,
+          "approx_cost": "0€",
+          "tips": "Visit the beautiful greenhouse and enjoy a romantic moment by the lake. The garden is especially lovely in the afternoon light.",
+          "duration": "1 hour",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqRjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqRjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "16:00",
+        "title": "Cultural Monument",
+        "items": [{
+          "title": "Torre de Belém",
+          "why": "Visit this iconic UNESCO World Heritage monument together. This 16th-century tower, standing gracefully by the Tagus River, represents the golden age of Portuguese discoveries and offers a romantic riverside setting.",
+          "address": "Av. Brasília, Lisbon",
+          "lat": 38.6916,
+          "lng": -9.2160,
+          "approx_cost": "6€",
+          "tips": "Take photos from different angles along the riverbank. The late afternoon light makes the limestone tower glow beautifully.",
+          "duration": "1 hour",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqSjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqSjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "18:00",
+        "title": "Sunset Views",
+        "items": [{
+          "title": "Miradouro da Senhora do Monte",
+          "why": "End your cultural day with the most romantic sunset view in Lisbon. This viewpoint offers breathtaking panoramic views over the entire city, making it the perfect spot for couples to watch the sun set over the red rooftops.",
+          "address": "Largo Monte, Lisbon",
+          "lat": 38.7174,
+          "lng": -9.1334,
+          "approx_cost": "0€",
+          "tips": "Arrive 30 minutes before sunset. Bring a bottle of wine from a nearby shop to make it extra romantic.",
+          "duration": "1.5 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqTjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqTjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "20:00",
+        "title": "Romantic Dinner",
+        "items": [{
+          "title": "Pharmacia",
+          "why": "Conclude your romantic cultural day at this unique restaurant housed in a former pharmacy. The intimate atmosphere, creative Portuguese cuisine, and beautiful vintage décor create the perfect romantic dinner setting.",
+          "address": "Rua Marechal Saldanha, 1, Lisbon",
+          "lat": 38.7223,
+          "lng": -9.1393,
+          "approx_cost": "80€",
+          "tips": "Make a reservation in advance. Try their tasting menu for a special romantic dining experience.",
+          "duration": "2 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqUjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqUjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      }
+    ]
+  }]
+}

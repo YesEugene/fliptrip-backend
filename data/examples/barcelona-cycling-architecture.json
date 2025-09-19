@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "city": "Barcelona",
+    "date": "2025-09-19",
+    "audience": "individual",
+    "interests": ["cycling", "architecture"],
+    "budget": 300
+  },
+  "title": "Cycling through Barcelona's architectural wonders",
+  "subtitle": "September 19th, 2025 - a one-man journey unveiling Barcelona's secrets. Pedal through history, marvel at architectural grandeur, and let the city's rhythm be your guide. Embark on your two-wheeled adventure, and let Barcelona reveal its soul to you.",
+  "weather": {
+    "forecast": "Expect a hot sunny day in Barcelona with temperatures reaching 32°C. Perfect weather for cycling and exploring architectural marvels.",
+    "clothing": "Wear lightweight, breathable clothing - a light cotton t-shirt, shorts, and comfortable cycling shoes. Don't forget sunglasses and a hat.",
+    "tips": "Stay hydrated with plenty of water, apply sunscreen regularly, and take breaks in shaded areas during your architectural tour!"
+  },
+  "budget": {
+    "totalCost": 290,
+    "totalBudget": 300,
+    "isWithinBudget": true,
+    "budgetRatio": 0.97,
+    "remainingBudget": 10
+  },
+  "daily_plan": [{
+    "blocks": [
+      {
+        "time": "08:00",
+        "title": "Morning Start",
+        "items": [{
+          "title": "Café de l'Opera",
+          "why": "Start your architectural cycling adventure at the legendary Café de l'Opera on La Rambla. This historic café, with its ornate Belle Époque interior, has been serving coffee since 1929. The perfect place to fuel up before your cycling tour through Barcelona's architectural treasures.",
+          "address": "La Rambla, 74, Barcelona",
+          "lat": 41.3809,
+          "lng": 2.1734,
+          "approx_cost": "25€",
+          "tips": "Arrive early to avoid crowds and enjoy the morning atmosphere. Try their famous café con leche and croissant.",
+          "duration": "1 hour",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqE8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqE8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            },
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqF2G8VcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqF2G8VcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "09:30",
+        "title": "Morning Activity",
+        "items": [{
+          "title": "Sagrada Familia",
+          "why": "Cycle to Gaudí's masterpiece, the iconic Sagrada Familia. This architectural marvel has been under construction since 1882 and represents the pinnacle of Modernist architecture. The intricate facades and towering spires make it a must-see for any architecture enthusiast.",
+          "address": "Carrer de Mallorca, 401, Barcelona",
+          "lat": 41.4036,
+          "lng": 2.1744,
+          "approx_cost": "35€",
+          "tips": "Book tickets in advance online. The morning light creates beautiful shadows on the facades, perfect for photography.",
+          "duration": "2 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqH5R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqH5R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            },
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqJ8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqJ8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "11:30",
+        "title": "Cultural Experience",
+        "items": [{
+          "title": "Museu Picasso",
+          "why": "Cycle through the Gothic Quarter to reach the Picasso Museum, housed in five medieval palaces. This architectural setting provides the perfect backdrop for Picasso's early works, combining medieval architecture with modern art.",
+          "address": "Carrer de Montcada, 15-23, Barcelona",
+          "lat": 41.3851,
+          "lng": 2.1734,
+          "approx_cost": "25€",
+          "tips": "The museum is free on the first Sunday of each month. The medieval courtyards are as impressive as the artworks.",
+          "duration": "1.5 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqK8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqK8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            },
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqM8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqM8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "13:00",
+        "title": "Lunch Break",
+        "items": [{
+          "title": "El Nacional",
+          "why": "This stunning food hall occupies a beautifully restored Modernist building from 1889. El Nacional combines architectural beauty with culinary excellence, featuring multiple restaurants under one magnificent roof with original mosaic floors and stained glass.",
+          "address": "Passeig de Gràcia, 24, Barcelona",
+          "lat": 41.3954,
+          "lng": 2.1619,
+          "approx_cost": "60€",
+          "tips": "Try different cuisines from various counters. The architecture of the building is as impressive as the food.",
+          "duration": "1.5 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqL8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqL8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "14:30",
+        "title": "Afternoon Exploration",
+        "items": [{
+          "title": "Parc de la Ciutadella",
+          "why": "Cycle through this beautiful urban park, home to the stunning Cascada Monumental fountain designed by Josep Fontserè with input from young Antoni Gaudí. The park features several architectural gems including the Castell dels Tres Dragons.",
+          "address": "Passeig de Picasso, 21, Barcelona",
+          "lat": 41.3888,
+          "lng": 2.187,
+          "approx_cost": "0€",
+          "tips": "Perfect for a cycling break. Don't miss the ornate fountain and the modernist buildings within the park.",
+          "duration": "1 hour",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqM8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqM8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "16:00",
+        "title": "Architectural Marvel",
+        "items": [{
+          "title": "Park Güell",
+          "why": "Another Gaudí masterpiece, Park Güell showcases the architect's unique vision of integrating architecture with nature. The colorful mosaics, serpentine bench, and gingerbread-style houses make this a cycling destination like no other.",
+          "address": "Carrer d'Olot, Barcelona",
+          "lat": 41.4145,
+          "lng": 2.1527,
+          "approx_cost": "15€",
+          "tips": "Book timed entry tickets online. The views over Barcelona from the main terrace are spectacular.",
+          "duration": "2 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqN8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqN8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "18:00",
+        "title": "Evening Activity",
+        "items": [{
+          "title": "Parc del Laberint d'Horta",
+          "why": "End your cycling tour at Barcelona's oldest garden, featuring neoclassical and romantic architectural elements. The 18th-century labyrinth and pavilions offer a peaceful conclusion to your architectural journey.",
+          "address": "Passeig dels Castanyers, 1, Barcelona",
+          "lat": 41.4386,
+          "lng": 2.1419,
+          "approx_cost": "10€",
+          "tips": "Visit in the late afternoon when the light is softer. The labyrinth is fun to navigate after a day of cycling.",
+          "duration": "1 hour",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqO8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqO8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "20:00",
+        "title": "Dinner",
+        "items": [{
+          "title": "Casa Lolea",
+          "why": "Dine at this charming restaurant that perfectly combines traditional Catalan architecture with modern design. The restored historic building features original stone walls and vaulted ceilings, creating an atmospheric setting for your evening meal.",
+          "address": "Carrer de Sant Pere Més Alt, 49, Barcelona",
+          "lat": 41.3851,
+          "lng": 2.1734,
+          "approx_cost": "40€",
+          "tips": "Try their signature sangria and tapas. The interior architecture is beautifully preserved.",
+          "duration": "1.5 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqP8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqP8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "21:30",
+        "title": "Evening Drinks",
+        "items": [{
+          "title": "El Bosc de les Fades",
+          "why": "End your architectural adventure at this whimsical fairy-tale themed bar. Located in a beautifully converted historic building, it features unique architectural elements including artificial trees, caves, and mystical decorations that create a magical atmosphere.",
+          "address": "Passatge de la Banca, 5, Barcelona",
+          "lat": 41.3809,
+          "lng": 2.1734,
+          "approx_cost": "30€",
+          "tips": "The interior design is an architectural fantasy. Perfect place to reflect on your day of architectural discoveries.",
+          "duration": "1 hour",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqQ8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqQ8R9WfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      }
+    ]
+  }]
+}

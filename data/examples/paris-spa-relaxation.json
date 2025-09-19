@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "city": "Paris",
+    "date": "2025-09-19",
+    "audience": "individual",
+    "interests": ["spa", "relaxation"],
+    "budget": 350
+  },
+  "title": "Soothing spa relaxation in Paris",
+  "subtitle": "September 19th, 2025 - a day of pure indulgence in the City of Light. Surrender to tranquility, embrace serenity, and let Paris pamper your soul. A journey of relaxation awaits in the world's most romantic city.",
+  "weather": {
+    "forecast": "Expect a cool, pleasant day in Paris with temperatures around 16°C. Perfect weather for leisurely strolls between spa treatments and cozy café visits.",
+    "clothing": "Dress in layers - a light sweater or cardigan, comfortable walking shoes, and bring a light jacket for the evening.",
+    "tips": "The cooler weather is perfect for spa treatments. Carry an umbrella as autumn showers are possible."
+  },
+  "budget": {
+    "totalCost": 340,
+    "totalBudget": 350,
+    "isWithinBudget": true,
+    "budgetRatio": 0.97,
+    "remainingBudget": 10
+  },
+  "daily_plan": [{
+    "blocks": [
+      {
+        "time": "08:00",
+        "title": "Morning Start",
+        "items": [{
+          "title": "Café de Flore",
+          "why": "Begin your relaxing day at the legendary Café de Flore, a historic Parisian café that has been a haven of tranquility since 1887. The Art Deco interior and peaceful morning atmosphere set the perfect tone for your spa day.",
+          "address": "172 Boulevard Saint-Germain, Paris",
+          "lat": 48.8542,
+          "lng": 2.3320,
+          "approx_cost": "25€",
+          "tips": "Sit on the heated terrace and enjoy people-watching with your morning coffee. The atmosphere is most peaceful before 9 AM.",
+          "duration": "1 hour",
+          "photos": [
+            {
+              "url": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&h=600&fit=crop&q=80",
+              "thumbnail": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=200&h=150&fit=crop&q=80",
+              "source": "unsplash"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&h=600&fit=crop&q=80",
+              "thumbnail": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=200&h=150&fit=crop&q=80",
+              "source": "unsplash"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "09:30",
+        "title": "Morning Activity",
+        "items": [{
+          "title": "Eiffel Tower",
+          "why": "Take a peaceful morning visit to the Eiffel Tower. The early hours offer a serene experience with fewer crowds, allowing you to quietly admire this architectural marvel and enjoy the calming views over Paris.",
+          "address": "Champ de Mars, 5 Avenue Anatole France, Paris",
+          "lat": 48.8584,
+          "lng": 2.2945,
+          "approx_cost": "30€",
+          "tips": "Visit the first floor for panoramic views. The morning light creates a peaceful, golden atmosphere perfect for relaxation.",
+          "duration": "2 hours",
+          "photos": [
+            {
+              "url": "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&h=600&fit=crop&q=80",
+              "thumbnail": "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=200&h=150&fit=crop&q=80",
+              "source": "unsplash"
+            },
+            {
+              "url": "https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=800&h=600&fit=crop&q=80",
+              "thumbnail": "https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=200&h=150&fit=crop&q=80",
+              "source": "unsplash"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "11:30",
+        "title": "Cultural Experience",
+        "items": [{
+          "title": "Louvre Museum",
+          "why": "Experience art therapy at the world's most famous museum. The peaceful galleries and timeless masterpieces provide a meditative environment perfect for relaxation and cultural enrichment.",
+          "address": "Rue de Rivoli, Paris",
+          "lat": 48.8606,
+          "lng": 2.3376,
+          "approx_cost": "20€",
+          "tips": "Focus on one or two galleries to avoid overwhelm. The Egyptian antiquities section is particularly peaceful.",
+          "duration": "2 hours",
+          "photos": [
+            {
+              "url": "https://images.unsplash.com/photo-1541971875076-8f970d573be6?w=800&h=600&fit=crop&q=80",
+              "thumbnail": "https://images.unsplash.com/photo-1541971875076-8f970d573be6?w=200&h=150&fit=crop&q=80",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "13:30",
+        "title": "Lunch Break",
+        "items": [{
+          "title": "L'As du Fallafel",
+          "why": "Enjoy a healthy, satisfying lunch at this famous falafel restaurant in the Marais. The fresh ingredients and relaxed atmosphere provide the perfect midday break for your wellness day.",
+          "address": "34 Rue des Rosiers, Paris",
+          "lat": 48.8575,
+          "lng": 2.3621,
+          "approx_cost": "15€",
+          "tips": "Try their famous falafel sandwich with all the toppings. The outdoor seating is perfect for people-watching.",
+          "duration": "1 hour",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqJjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqJjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "14:30",
+        "title": "Spa Treatment",
+        "items": [{
+          "title": "Spa Nuxe Montorgueil",
+          "why": "Indulge in a luxurious spa treatment at one of Paris's most renowned wellness centers. This urban oasis offers a range of relaxing treatments in a beautifully designed space.",
+          "address": "32 Rue Montorgueil, Paris",
+          "lat": 48.8634,
+          "lng": 2.3478,
+          "approx_cost": "120€",
+          "tips": "Book the signature Nuxe massage. Arrive 30 minutes early to enjoy the relaxation areas.",
+          "duration": "2.5 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqKjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqKjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "17:00",
+        "title": "Afternoon Relaxation",
+        "items": [{
+          "title": "Jardin du Luxembourg",
+          "why": "Take a peaceful stroll through these beautiful gardens. The perfectly manicured lawns, tree-lined paths, and peaceful atmosphere provide the ideal setting for post-spa relaxation.",
+          "address": "Jardin du Luxembourg, Paris",
+          "lat": 48.8462,
+          "lng": 2.3372,
+          "approx_cost": "0€",
+          "tips": "Find a quiet bench near the Medici Fountain. The gardens are especially beautiful in the late afternoon light.",
+          "duration": "1 hour",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqLjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqLjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      },
+      {
+        "time": "19:00",
+        "title": "Dinner",
+        "items": [{
+          "title": "Le Comptoir du Relais",
+          "why": "End your relaxing day with a delicious dinner at this cozy bistro. The intimate atmosphere and excellent French cuisine provide the perfect conclusion to your wellness day in Paris.",
+          "address": "9 Carrefour de l'Odéon, Paris",
+          "lat": 48.8510,
+          "lng": 2.3390,
+          "approx_cost": "60€",
+          "tips": "Try their daily specials. The wine selection is excellent and the atmosphere is intimate and relaxing.",
+          "duration": "2 hours",
+          "photos": [
+            {
+              "url": "https://lh3.googleusercontent.com/places/ANXAkqMjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s1600-w400",
+              "thumbnail": "https://lh3.googleusercontent.com/places/ANXAkqMjRpWfcF5nKj6wKvmJ3jZhVzQzFzYvVfEqYjKl8xAoKdCgHtNmRpL5VbF2Qr8wXsT9UvYzA3BcDeFgHiJkLmNoPqRsT=s200-w200",
+              "source": "google_places"
+            }
+          ]
+        }]
+      }
+    ]
+  }]
+}

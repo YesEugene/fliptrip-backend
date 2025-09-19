@@ -1,0 +1,11 @@
+{
+  "name": "expiria-api",
+  "version": "1.0.0",
+  "description": "Serverless API functions for Expiria travel app",
+  "main": "index.js",
+  "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.4.2",
+    "openai": "^4.24.1",
+    "stripe": "^14.10.0"
+  }
+}

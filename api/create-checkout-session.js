@@ -59,7 +59,7 @@ export default async function handler(req, res) {
         },
       ],
       mode: 'payment',
-      success_url: `https://fliptrip-frontend.vercel.app/success?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `https://fliptrip-frontend.vercel.app/itinerary?city=${formData.city}&audience=${formData.audience}&interests=${Array.isArray(formData.interests) ? formData.interests.join(',') : formData.interests}&date=${formData.date}&budget=${formData.budget}&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `https://fliptrip-frontend.vercel.app/payment`,
       metadata: {
         city: formData.city,

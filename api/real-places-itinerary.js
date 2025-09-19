@@ -4,15 +4,17 @@
 export default async function handler(req, res) {
   console.log('🌍 Real places API called:', {
     method: req.method,
-    body: req.body,
-    headers: req.headers
+    url: req.url,
+    origin: req.headers.origin,
+    userAgent: req.headers['user-agent'],
+    body: req.body
   });
 
-  // Устанавливаем CORS заголовки
-  res.setHeader('Access-Control-Allow-Origin', process.env.CORS_ORIGIN || '*');
+  // Устанавливаем CORS заголовки - временно разрешаем все домены для отладки
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+  res.setHeader('Access-Control-Allow-Credentials', 'false');
 
   // Обрабатываем preflight OPTIONS запрос
   if (req.method === 'OPTIONS') {

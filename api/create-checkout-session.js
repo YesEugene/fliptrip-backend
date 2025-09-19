@@ -59,8 +59,8 @@ export default async function handler(req, res) {
         },
       ],
       mode: 'payment',
-      success_url: `${process.env.CORS_ORIGIN}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.CORS_ORIGIN}/payment`,
+      success_url: `https://fliptrip-frontend.vercel.app/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `https://fliptrip-frontend.vercel.app/payment`,
       metadata: {
         city: formData.city,
         audience: formData.audience,

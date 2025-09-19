@@ -1,9 +1,9 @@
 // Vercel Serverless Function для create-checkout-session API
-const Stripe = require('stripe');
+import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   // Устанавливаем CORS заголовки
   res.setHeader('Access-Control-Allow-Origin', process.env.CORS_ORIGIN || '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');

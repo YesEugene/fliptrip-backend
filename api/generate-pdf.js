@@ -1,7 +1,6 @@
 // Vercel Serverless Function для generate-pdf API
-const originalAPI = require('../backend/api/generate-pdf');
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   // Устанавливаем CORS заголовки
   res.setHeader('Access-Control-Allow-Origin', process.env.CORS_ORIGIN || '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');

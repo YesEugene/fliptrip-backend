@@ -1,9 +1,9 @@
-const { Resend } = require('resend');
+import { Resend } from 'resend';
 
 // Initialize Resend with mock key if no API key is provided
 const resend = new Resend(process.env.RESEND_API_KEY || 're_mock_key_for_development');
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }

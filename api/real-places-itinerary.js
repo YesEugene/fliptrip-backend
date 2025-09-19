@@ -1,6 +1,6 @@
 // Vercel Serverless Function для real-places-itinerary API
-const OpenAI = require('openai');
-const { Client } = require('@googlemaps/google-maps-services-js');
+import OpenAI from 'openai';
+import { Client } from '@googlemaps/google-maps-services-js';
 
 // Инициализация OpenAI
 const openai = new OpenAI({
@@ -10,7 +10,7 @@ const openai = new OpenAI({
 // Инициализация Google Maps
 const googleMapsClient = new Client({});
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   // Устанавливаем CORS заголовки
   res.setHeader('Access-Control-Allow-Origin', process.env.CORS_ORIGIN || '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');

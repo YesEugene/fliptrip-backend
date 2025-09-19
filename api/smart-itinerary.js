@@ -360,4 +360,4 @@ function generateBasicFallback({ city = 'Barcelona', audience = 'him', date = '2
     totalCost: 12,
     withinBudget: true
   };
-}
+}// Force redeploy

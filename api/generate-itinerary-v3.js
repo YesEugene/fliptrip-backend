@@ -43,63 +43,75 @@ export default async function handler(req, res) {
         blocks: [
           {
             time: '09:00',
-            name: 'Morning Coffee & Pastries',
-            description: 'Start your day with excellent coffee and fresh Catalan pastries at a local café',
-            category: 'cafe',
-            duration: 60,
-            price: 12,
-            location: 'El Born District',
-            photos: ['https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&h=600&fit=crop&q=80']
+            items: [{
+              title: 'Morning Coffee & Pastries',
+              description: 'Start your day with excellent coffee and fresh Catalan pastries at a local café',
+              category: 'cafe',
+              duration: 60,
+              price: 12,
+              location: 'El Born District',
+              photos: ['https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&h=600&fit=crop&q=80']
+            }]
           },
           {
             time: '10:30',
-            name: 'Sagrada Familia',
-            description: 'Marvel at Antoni Gaudí\'s architectural masterpiece and iconic basilica',
-            category: 'attraction',
-            duration: 120,
-            price: 33,
-            location: 'Eixample District',
-            photos: ['https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop&q=80']
+            items: [{
+              title: 'Sagrada Familia',
+              description: 'Marvel at Antoni Gaudí\'s architectural masterpiece and iconic basilica',
+              category: 'attraction',
+              duration: 120,
+              price: 33,
+              location: 'Eixample District',
+              photos: ['https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop&q=80']
+            }]
           },
           {
             time: '13:00',
-            name: 'Authentic Tapas Lunch',
-            description: 'Experience traditional Catalan cuisine with local tapas and wine',
-            category: 'restaurant',
-            duration: 90,
-            price: 45,
-            location: 'Gothic Quarter',
-            photos: ['https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop&q=80']
+            items: [{
+              title: 'Authentic Tapas Lunch',
+              description: 'Experience traditional Catalan cuisine with local tapas and wine',
+              category: 'restaurant',
+              duration: 90,
+              price: 45,
+              location: 'Gothic Quarter',
+              photos: ['https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop&q=80']
+            }]
           },
           {
             time: '15:00',
-            name: 'Park Güell',
-            description: 'Explore Gaudí\'s whimsical park with colorful mosaics and panoramic city views',
-            category: 'attraction',
-            duration: 120,
-            price: 10,
-            location: 'Gràcia District',
-            photos: ['https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=800&h=600&fit=crop&q=80']
+            items: [{
+              title: 'Park Güell',
+              description: 'Explore Gaudí\'s whimsical park with colorful mosaics and panoramic city views',
+              category: 'attraction',
+              duration: 120,
+              price: 10,
+              location: 'Gràcia District',
+              photos: ['https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=800&h=600&fit=crop&q=80']
+            }]
           },
           {
             time: '17:30',
-            name: 'Barceloneta Beach',
-            description: 'Relax at Barcelona\'s famous urban beach with Mediterranean views',
-            category: 'outdoor',
-            duration: 90,
-            price: 0,
-            location: 'Barceloneta',
-            photos: ['https://images.unsplash.com/photo-1544737151-6e4b9eb2e0b7?w=800&h=600&fit=crop&q=80']
+            items: [{
+              title: 'Barceloneta Beach',
+              description: 'Relax at Barcelona\'s famous urban beach with Mediterranean views',
+              category: 'outdoor',
+              duration: 90,
+              price: 0,
+              location: 'Barceloneta',
+              photos: ['https://images.unsplash.com/photo-1544737151-6e4b9eb2e0b7?w=800&h=600&fit=crop&q=80']
+            }]
           },
           {
             time: '19:00',
-            name: 'Evening Stroll & Dinner',
-            description: 'Walk along Las Ramblas and enjoy dinner at a traditional restaurant',
-            category: 'restaurant',
-            duration: 120,
-            price: 55,
-            location: 'Las Ramblas',
-            photos: ['https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=800&h=600&fit=crop&q=80']
+            items: [{
+              title: 'Evening Stroll & Dinner',
+              description: 'Walk along Las Ramblas and enjoy dinner at a traditional restaurant',
+              category: 'restaurant',
+              duration: 120,
+              price: 55,
+              location: 'Las Ramblas',
+              photos: ['https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=800&h=600&fit=crop&q=80']
+            }]
           }
         ]
       }],

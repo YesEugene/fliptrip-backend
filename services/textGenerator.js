@@ -27,8 +27,8 @@ const isApiKeyValid = () => {
  * Все промпты собраны в одном месте для удобного редактирования
  */
 const PROMPTS = {
-  // КОНЦЕПТУАЛЬНЫЙ ПЛАН ДНЯ
-  CONCEPTUAL_PLAN: `Create a conceptual day plan for {city}.
+  // КОНЦЕПТУАЛЬНЫЙ ПЛАН ДНЯ - НОВАЯ ЛОГИКА
+  CONCEPTUAL_PLAN: `You are a creative travel planner. Based on the input data (city, date, interests, audience, budget), create a full-day itinerary that runs from 9:00 AM to around 9:30 PM.
 
 CONTEXT:
 - City: {city}
@@ -38,44 +38,68 @@ CONTEXT:
 - Date: {date}
 - Season: {season}
 
-REQUIREMENTS:
-1. Create 8-9 time slots from 09:00 to 21:00
-2. Consider city-specific activities and local culture
-3. Match activities to interests and audience
-4. Ensure logical flow and energy levels throughout the day
-5. Include meal times at appropriate hours
-6. Consider budget constraints
-7. Add seasonal relevance
+Step 1. Build a Creative Concept of the Day
+• Take into account the city and what it has to offer.
+• Consider the audience (for him, for her, for a couple, for a child) and adapt the tone of the day accordingly.
+• Use the chosen interests to design a unique and memorable plan, with a balance between activities and meals across time slots (breakfast, lunch, dinner, snacks, activities, nightlife).
+• Respect the budget: the total cost of all locations must fit within the user's budget, with a maximum deviation of ±30%. If the budget is small, include free or affordable activities; if large, suggest exclusive experiences.
+• Enrich the interests with associative ideas (e.g. "sports" → running, cycling, gyms, outdoor activities, sports cafés).
 
-Use your knowledge of {city} to create unique, locally relevant activities.
-For interests like "romantic" in Paris - suggest Seine walks, intimate bistros.
-For "sports" in coastal cities - suggest water activities, beach sports.
-For "culture" - suggest museums, galleries, historic sites specific to the city.
+Step 2. Formulate a Task for Google Places
+
+Once the creative concept of the day is ready, OpenAI must translate each time slot into a structured request for Google Places API.
+The request is not descriptive text but a JSON-like query with clear parameters:
+• Type of place (type=cafe, type=restaurant, type=bar, type=tourist_attraction, etc.),
+• Keywords to reflect the concept (keyword=viewpoint, keyword=cycling, keyword=rooftop),
+• Location (city coordinates),
+• Radius for the search around the user's path,
+• Filters for quality (minrating, user_ratings_total),
+• Price range (minprice, maxprice) that ensures the total day cost stays within the user's budget ±30%,
+• Openness (opennow=true) to match the actual time slot.
+
+Example:
+Creative concept: "At 9 AM the day should start with coffee at a scenic viewpoint in Paris."
 
 RESPONSE FORMAT (JSON only, no markdown):
 {
-  "concept": "Brief description of the day's theme/concept",
+  "concept": "Brief description of the day's creative theme/concept",
   "timeSlots": [
     {
       "time": "09:00",
-      "activity": "Energizing breakfast with local specialties",
+      "activity": "Morning coffee at scenic viewpoint",
       "category": "cafe",
-      "description": "Start with traditional local breakfast to fuel the day",
-      "keywords": ["breakfast", "local", "energy", "traditional"],
+      "description": "Start with energizing coffee overlooking the city",
+      "keywords": ["coffee", "viewpoint", "morning", "scenic", "local"],
       "energyLevel": "medium",
-      "priority": "essential"
+      "priority": "essential",
+      "budgetTier": "budget",
+      "googlePlacesQuery": {
+        "type": "cafe",
+        "keywords": ["coffee", "viewpoint", "morning"],
+        "minrating": 4.0,
+        "priceLevel": 2,
+        "opennow": true
+      }
     }
   ]
 }
 
 Make it creative, locally relevant, and perfectly suited for {audience} interested in {interests}.`,
 
-  // Заголовок маршрута
-  TITLE: `Напиши короткий и вдохновляющий заголовок на английском для маршрута дня. Он должен содержать название города и отразить выбранные интересы, быть ёмким и цепляющим, максимум одно предложение. Используй обычные правила капитализации - только первое слово и имена собственные с заглавной буквы. НЕ используй кавычки в начале и конце.
+  // Заголовок маршрута - НОВАЯ ЛОГИКА
+  TITLE: `Write a short and inspiring title in English for the day's itinerary.
+It must include the city name and reflect the chosen interests.
+Always follow the creative concept of the day. Maximum one sentence.
 
 City: {city}
 Interests: {interests}
 Audience: {audience}
+Creative concept: {concept}
+
+Example Output:
+Paris in Motion: A Day Built for Him
+
+Create the title:`,
 
 Examples:
 - Romantic Venice
@@ -84,27 +108,38 @@ Examples:
 
 Create the title:`,
 
-  // Подзаголовок маршрута
-  SUBTITLE: `Составь вдохновляющий подзаголовок на английском для маршрута дня. Укажи дату, для кого маршрут (для него, для неё, для пары, для ребёнка), отрази выбранные интересы. Опиши день поэтично и ярко, так чтобы человек захотел сразу отправиться в это путешествие. Сделай заголовок из 3-5 предложений в формате трейлера к фильму. НЕ используй кавычки в начале и конце.
+  // Подзаголовок маршрута - НОВАЯ ЛОГИКА
+  SUBTITLE: `Write a long and inspiring subtitle in English for the day's itinerary.
+* Mention the date,
+* Reflect the city,
+* Include the chosen interests and selected locations,
+* Describe the rhythm of the day from morning to night,
+* Always follow the creative concept of the day. A tone of voice should make the reader want to experience this day immediately.
+Length: 3–4 sentences.
 
 City: {city}
 Date: {date}
 Interests: {interests}
 Audience: {audience}
+Creative concept: {concept}
 
-Examples:
-- December 25th for her - a romantic journey through the canals of Venice. Discover hidden gems and create unforgettable memories together.
-- September 27th for him - adventures in the heart of Catalonia. Experience the vibrant culture and breathtaking architecture.
-- March 15th for couples - cultural immersion in Paris. From morning croissants to evening strolls along the Seine.
+Example Output:
+On September 10th, Paris is yours to discover — from sunrise runs along the Seine to local markets alive with flavor, from bold art and rooftop skies to the pulse of its legendary nightlife. Every step is planned, every hour alive with energy, and the city carries you through a day made to be unforgettable.
 
 Create the subtitle:`,
 
-  // Погода
-  WEATHER: `Сформулируй 2 коротких предложения на английском о погоде в выбранном городе и дате. Дай конкретный совет, что надеть, чтобы чувствовать себя комфортно весь день. Используй лёгкий, дружеский тон.
+  // Погода - НОВАЯ ЛОГИКА
+  WEATHER: `Write 2 short sentences in English about the weather in the chosen city and date.
+Give a specific suggestion on what to wear to stay comfortable all day.
+Keep the tone light, friendly, and aligned with the overall concept of the day.
 
 City: {city}
 Date: {date}
 Interests: {interests}
+Creative concept: {concept}
+
+Example Output:
+The September sun will be warm but gentle over Paris, with a cool breeze by the river. Light layers and comfortable shoes will keep you ready for every moment.
 
 Response format in JSON:
 {
@@ -120,33 +155,38 @@ Examples:
 
 Create the weather description:`,
 
-  // Описание локации
-  LOCATION_DESCRIPTION: `Напиши 2–3 предложения на английском о локации, которая выбрана в маршруте. Опиши её атмосферу и особенности через призму интересов пользователя. Сделай текст вдохновляющим, чтобы захотелось посетить это место, но избегай сухого перечисления фактов. НЕ используй кавычки в начале и конце.
+  // Описание локации - НОВАЯ ЛОГИКА
+  LOCATION_DESCRIPTION: `Write 2–3 inspiring sentences in English about each chosen location.
+Describe its atmosphere and features through the lens of the user's interests.
+Avoid dry facts — instead, create a sense of mood and emotion.
+Always follow the creative concept of the day.
 
 Location: {locationName}
 Address: {address}
 Category: {category}
 User interests: {interests}
 Audience: {audience}
+Creative concept: {concept}
 
-Examples:
-- This place breathes history and romance. The morning light plays softly on ancient walls, creating an atmosphere that makes your heart beat faster.
-- Creative energy and inspiration reign here. Every corner tells its own story, and locals are happy to share the secrets of this place.
+Example Output:
+Your afternoon unfolds at Marché des Enfants Rouges, a bustling market alive with colors and scents. Here, food is more than a meal — it's a celebration of cultures, flavors, and the energy of Paris itself.
 
 Create the description:`,
 
-  // Советы по локации
-  LOCATION_TIPS: `Напиши 1–2 коротких совета на английском для посещения локации. Тон дружеский, лёгкий, чуть поэтичный. Советы должны создавать настроение путешествия и показывать заботу о пользователе. НЕ используй кавычки в начале и конце.
+  // Советы по локации - НОВАЯ ЛОГИКА
+  LOCATION_TIPS: `Write 1–2 short, friendly, slightly poetic tips in English for visiting each location.
+Tone: light, caring, inspiring.
+Make the user feel guided and taken care of, fully immersed in the journey.
+Follow the creative concept of the day.
 
 Location: {locationName}
 Category: {category}
 Interests: {interests}
 Audience: {audience}
+Creative concept: {concept}
 
-Examples:
-- Come at dawn - at this time the place is especially magical and deserted.
-- Don't rush, give yourself time to feel the atmosphere of this special place.
-- Try the local coffee - it's special here and will tell you more about the city than any guide.
+Example Output:
+Arrive a little early to find a cozy table, and don't rush — let the market's rhythm set the pace for your afternoon.
 
 Create the tips:`
 };
@@ -384,8 +424,8 @@ const FALLBACK_DATA = {
 /**
  * Генерирует заголовок маршрута
  */
-async function generateTitle(city, interests, audience) {
-  console.log('🤖 Генерируем заголовок для:', { city, interests, audience });
+async function generateTitle(city, interests, audience, concept) {
+  console.log('🤖 Генерируем заголовок для:', { city, interests, audience, concept });
   console.log('🔑 API ключ доступен:', isApiKeyValid());
 
   // ВСЕГДА используем OpenAI API (fallback убран по требованию)
@@ -397,7 +437,8 @@ async function generateTitle(city, interests, audience) {
     const prompt = PROMPTS.TITLE
       .replace('{city}', city || 'Unknown City')
       .replace('{interests}', Array.isArray(interests) ? interests.join(', ') : (interests || 'exploration'))
-      .replace('{audience}', audience || 'traveler');
+      .replace('{audience}', audience || 'traveler')
+      .replace('{concept}', concept || 'exploration');
 
     console.log('📝 Отправляем промпт в OpenAI:', prompt.substring(0, 100) + '...');
 
@@ -420,8 +461,8 @@ async function generateTitle(city, interests, audience) {
 /**
  * Генерирует подзаголовок маршрута
  */
-async function generateSubtitle(city, interests, audience, date) {
-  console.log('🤖 Генерируем подзаголовок для:', { city, interests, audience, date });
+async function generateSubtitle(city, interests, audience, date, concept) {
+  console.log('🤖 Генерируем подзаголовок для:', { city, interests, audience, date, concept });
   console.log('🔑 API ключ доступен:', isApiKeyValid());
 
   // ВСЕГДА используем OpenAI API (fallback убран по требованию)
@@ -434,7 +475,8 @@ async function generateSubtitle(city, interests, audience, date) {
       .replace('{city}', city || 'Unknown City')
       .replace('{interests}', Array.isArray(interests) ? interests.join(', ') : (interests || 'exploration'))
       .replace('{audience}', Array.isArray(audience) ? audience.join(', ') : (audience || 'traveler'))
-      .replace('{date}', date || 'today');
+      .replace('{date}', date || 'today')
+      .replace('{concept}', concept || 'exploration');
 
     console.log('📝 Отправляем промпт подзаголовка в OpenAI:', prompt.substring(0, 100) + '...');
 
@@ -457,8 +499,8 @@ async function generateSubtitle(city, interests, audience, date) {
 /**
  * Генерирует информацию о погоде
  */
-async function generateWeather(city, interests, date) {
-  console.log('🤖 Генерируем погоду для:', { city, interests, date });
+async function generateWeather(city, interests, date, concept) {
+  console.log('🤖 Генерируем погоду для:', { city, interests, date, concept });
 
   // Если API ключ недоступен, используем локальную генерацию
   // ВСЕГДА используем OpenAI API (fallback убран по требованию)
@@ -470,7 +512,8 @@ async function generateWeather(city, interests, date) {
     const prompt = PROMPTS.WEATHER
       .replace('{city}', city || 'Unknown City')
       .replace('{interests}', Array.isArray(interests) ? interests.join(', ') : (interests || 'exploration'))
-      .replace('{date}', date || 'today');
+      .replace('{date}', date || 'today')
+      .replace('{concept}', concept || 'exploration');
 
     const response = await openai.chat.completions.create({
       model: "gpt-4",
@@ -502,8 +545,8 @@ async function generateWeather(city, interests, date) {
 /**
  * Генерирует описание локации
  */
-async function generateLocationDescription(locationName, address, category, interests, audience) {
-  console.log('🤖 Генерируем описание локации для:', { locationName, category, interests, audience });
+async function generateLocationDescription(locationName, address, category, interests, audience, concept) {
+  console.log('🤖 Генерируем описание локации для:', { locationName, category, interests, audience, concept });
 
   // ВСЕГДА используем OpenAI API (fallback убран по требованию)
   if (!isApiKeyValid()) {
@@ -516,7 +559,8 @@ async function generateLocationDescription(locationName, address, category, inte
       .replace('{address}', address)
       .replace('{category}', category)
       .replace('{interests}', Array.isArray(interests) ? interests.join(', ') : interests)
-      .replace('{audience}', audience);
+      .replace('{audience}', audience)
+      .replace('{concept}', concept || 'exploration');
 
     const response = await openai.chat.completions.create({
       model: "gpt-4",
@@ -537,8 +581,8 @@ async function generateLocationDescription(locationName, address, category, inte
 /**
  * Генерирует советы по локации
  */
-async function generateLocationTips(locationName, category, interests, audience) {
-  console.log('🤖 Генерируем советы для локации:', { locationName, category, interests, audience });
+async function generateLocationTips(locationName, category, interests, audience, concept) {
+  console.log('🤖 Генерируем советы для локации:', { locationName, category, interests, audience, concept });
 
   // ВСЕГДА используем OpenAI API (fallback убран по требованию)
   if (!isApiKeyValid()) {
@@ -550,7 +594,8 @@ async function generateLocationTips(locationName, category, interests, audience)
       .replace('{locationName}', locationName)
       .replace('{category}', category)
       .replace('{interests}', Array.isArray(interests) ? interests.join(', ') : interests)
-      .replace('{audience}', audience);
+      .replace('{audience}', audience)
+      .replace('{concept}', concept || 'exploration');
 
     const response = await openai.chat.completions.create({
       model: "gpt-4",

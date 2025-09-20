@@ -363,3 +363,4 @@ function generateBasicFallback({ city = 'Barcelona', audience = 'him', date = '2
 }// FORCE REDEPLOY: Backend restored to working commit 117d0b7
 // FORCE REDEPLOY: Restore good location planning
 // FORCE REDEPLOY: Restore generateAIDescription function
+// FORCE DEPLOY: Test current state with new prompts

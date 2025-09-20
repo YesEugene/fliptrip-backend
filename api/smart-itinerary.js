@@ -368,3 +368,4 @@ function generateBasicFallback({ city = 'Barcelona', audience = 'him', date = '2
 // RESTORE: Back to working location planning without logging
 // RESTORE: Back to working location planning without logging
 // RESTORE: Back to stable location planning
+// RESTORE: Back to working real locations

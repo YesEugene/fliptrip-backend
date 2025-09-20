@@ -156,12 +156,13 @@ Examples:
 Create the weather description:`,
 
   // Описание локации - РАСШИРЕННАЯ ВЕРСИЯ
-  LOCATION_DESCRIPTION: `Write 4–5 inspiring and detailed sentences in English about each chosen location.
+  LOCATION_DESCRIPTION: `IMPORTANT: Write EXACTLY 4-5 complete sentences in English about each chosen location. Do not write less than 4 sentences.
 Create a rich, immersive description that captures the essence, atmosphere, history, and unique character of the place.
 Describe what makes this location special, what visitors will experience, feel, see, hear, and discover.
 Include sensory details, emotional impact, and cultural significance.
 Connect the description to the user's interests and the creative concept of the day.
 Make it so vivid that the reader can almost be there.
+REQUIREMENT: Your response must contain at least 4 complete sentences with periods.
 
 Location: {locationName}
 Address: {address}
@@ -176,11 +177,12 @@ Your afternoon unfolds at Marché des Enfants Rouges, Paris's oldest covered mar
 Create the description:`,
 
   // Советы по локации - РАСШИРЕННАЯ ВЕРСИЯ
-  LOCATION_TIPS: `Write 3–4 detailed, friendly, and practical tips in English for visiting each location.
+  LOCATION_TIPS: `IMPORTANT: Write EXACTLY 3-4 complete sentences in English for visiting each location. Do not write less than 3 sentences.
 Include specific advice about timing, what to order/see/do, insider secrets, and how to make the most of the experience.
 Make the tips personal, caring, and inspiring — like advice from a knowledgeable local friend.
 Include practical details that enhance the visit and connect to the user's interests.
 Follow the creative concept of the day and make the user feel expertly guided.
+REQUIREMENT: Your response must contain at least 3 complete sentences with periods.
 
 Location: {locationName}
 Category: {category}
@@ -568,7 +570,7 @@ async function generateLocationDescription(locationName, address, category, inte
     const response = await openai.chat.completions.create({
       model: "gpt-4",
       messages: [{ role: "user", content: prompt }],
-      max_tokens: 300,
+      max_tokens: 400,
       temperature: 0.8
     });
 
@@ -603,7 +605,7 @@ async function generateLocationTips(locationName, category, interests, audience,
     const response = await openai.chat.completions.create({
       model: "gpt-4",
       messages: [{ role: "user", content: prompt }],
-      max_tokens: 250,
+      max_tokens: 350,
       temperature: 0.8
     });
 

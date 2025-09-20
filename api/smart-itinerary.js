@@ -361,3 +361,4 @@ function generateBasicFallback({ city = 'Barcelona', audience = 'him', date = '2
     withinBudget: true
   };
 }// FORCE REDEPLOY: Backend restored to working commit 117d0b7
+// FORCE REDEPLOY: Restore good location planning

@@ -366,3 +366,4 @@ function generateBasicFallback({ city = 'Barcelona', audience = 'him', date = '2
 // FORCE DEPLOY: Test current state with new prompts
 // RESTORE: Back to working planning version 474dc0a
 // RESTORE: Back to working location planning without logging
+// RESTORE: Back to working location planning without logging

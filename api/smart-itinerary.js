@@ -364,3 +364,4 @@ function generateBasicFallback({ city = 'Barcelona', audience = 'him', date = '2
 // FORCE REDEPLOY: Restore good location planning
 // FORCE REDEPLOY: Restore generateAIDescription function
 // FORCE DEPLOY: Test current state with new prompts
+// RESTORE: Back to working planning version 474dc0a

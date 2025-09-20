@@ -155,11 +155,13 @@ Examples:
 
 Create the weather description:`,
 
-  // Описание локации - НОВАЯ ЛОГИКА
-  LOCATION_DESCRIPTION: `Write 2–3 inspiring sentences in English about each chosen location.
-Describe its atmosphere and features through the lens of the user's interests.
-Avoid dry facts — instead, create a sense of mood and emotion.
-Always follow the creative concept of the day.
+  // Описание локации - РАСШИРЕННАЯ ВЕРСИЯ
+  LOCATION_DESCRIPTION: `Write 4–5 inspiring and detailed sentences in English about each chosen location.
+Create a rich, immersive description that captures the essence, atmosphere, history, and unique character of the place.
+Describe what makes this location special, what visitors will experience, feel, see, hear, and discover.
+Include sensory details, emotional impact, and cultural significance.
+Connect the description to the user's interests and the creative concept of the day.
+Make it so vivid that the reader can almost be there.
 
 Location: {locationName}
 Address: {address}
@@ -169,15 +171,16 @@ Audience: {audience}
 Creative concept: {concept}
 
 Example Output:
-Your afternoon unfolds at Marché des Enfants Rouges, a bustling market alive with colors and scents. Here, food is more than a meal — it's a celebration of cultures, flavors, and the energy of Paris itself.
+Your afternoon unfolds at Marché des Enfants Rouges, Paris's oldest covered market, where centuries of culinary tradition come alive in a symphony of colors, aromas, and flavors. The moment you step inside, the bustling energy envelops you — vendors calling out their daily specials, the sizzle of fresh ingredients hitting hot pans, and the cheerful chatter of locals sharing their favorite discoveries. Here, food transcends mere sustenance to become a celebration of cultures from around the world, each stall telling its own story through authentic recipes passed down through generations. The market's historic iron and glass architecture creates a cathedral-like space where natural light filters through, illuminating displays of vibrant produce, artisanal cheeses, and exotic spices that awaken all your senses. This is where Paris reveals one of its most authentic faces — a place where the city's multicultural soul shines brightest, and every bite connects you to the passionate artisans who pour their hearts into their craft.
 
 Create the description:`,
 
-  // Советы по локации - НОВАЯ ЛОГИКА
-  LOCATION_TIPS: `Write 1–2 short, friendly, slightly poetic tips in English for visiting each location.
-Tone: light, caring, inspiring.
-Make the user feel guided and taken care of, fully immersed in the journey.
-Follow the creative concept of the day.
+  // Советы по локации - РАСШИРЕННАЯ ВЕРСИЯ
+  LOCATION_TIPS: `Write 3–4 detailed, friendly, and practical tips in English for visiting each location.
+Include specific advice about timing, what to order/see/do, insider secrets, and how to make the most of the experience.
+Make the tips personal, caring, and inspiring — like advice from a knowledgeable local friend.
+Include practical details that enhance the visit and connect to the user's interests.
+Follow the creative concept of the day and make the user feel expertly guided.
 
 Location: {locationName}
 Category: {category}
@@ -186,7 +189,7 @@ Audience: {audience}
 Creative concept: {concept}
 
 Example Output:
-Arrive a little early to find a cozy table, and don't rush — let the market's rhythm set the pace for your afternoon.
+Arrive a little early to find the perfect spot and watch the market come alive with the morning energy — this is when vendors are most passionate about their offerings and happy to share stories. Don't miss trying the Moroccan tagine from the corner stall; the owner, Hassan, has been perfecting his grandmother's recipe for over twenty years and loves explaining the spices to curious visitors. Take your time to wander through each section — the cheese corner offers free tastings if you smile and show genuine interest, and the wine merchant often pairs recommendations with whatever you're planning to eat. Most importantly, bring cash and a sense of adventure; some of the best discoveries here aren't on any menu but emerge from friendly conversations with the artisans who pour their hearts into every creation.
 
 Create the tips:`
 };
@@ -565,7 +568,7 @@ async function generateLocationDescription(locationName, address, category, inte
     const response = await openai.chat.completions.create({
       model: "gpt-4",
       messages: [{ role: "user", content: prompt }],
-      max_tokens: 150,
+      max_tokens: 300,
       temperature: 0.8
     });
 
@@ -600,7 +603,7 @@ async function generateLocationTips(locationName, category, interests, audience,
     const response = await openai.chat.completions.create({
       model: "gpt-4",
       messages: [{ role: "user", content: prompt }],
-      max_tokens: 100,
+      max_tokens: 250,
       temperature: 0.8
     });
 
